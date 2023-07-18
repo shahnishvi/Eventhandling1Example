@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Handling</title>
+    <button>Change color</button>
+    
+</head>
+<body>
+  <div class="clr1" style="height:200px;" id="id1"></div>
+  <div class="clr2" style="height:200px;" id="id2"></div>
+  <div class="clr3" style="height:200px;" id="id3"></div>
+    <script>
+      <!--Let add some Javascript to that button-->
+      const btn = document.querySelector("button");
+      function random(number) {
+        return Math.floor(Math.random() * (number +1));
+      }
+      btn.addEventListener("dblclick", () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.getElementById("id1").style.backgroundColor=rndCol;
+
+        const rndCol2 = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.getElementById("id2").style.backgroundColor = rndCol2
+
+        const rndCol3 = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.getElementById("id3").style.backgroundColor = rndCol3
+      });
+    </script>
+</body>
+</html>
